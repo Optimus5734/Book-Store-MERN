@@ -18,4 +18,5 @@ Note:-app.use() is an Express method used for middleware registration.
 {
     Vite is a build tool and development server that is primarily designed for building web applications using modern JavaScript frameworks like Vue.js and React. It aims to provide a faster and more efficient development experience compared to traditional build tools, especially during development and testing phases.
 }
-now use of tailwind css
+now use of tailwind  css thats for frontend
+
