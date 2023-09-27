@@ -41,14 +41,14 @@ router.get("/", async (request, response) => {
 });
 
 //route to get one book from database by the us of id
-router.get("/:id", async (request, response) => {
+router.get('/:id', async (request, response) => {
   try {
     const { id } = request.params;
     const book = await Book.findById(id);
     if (!book) {
       return response.status(404).json({ message: "Book not found" });
     }
-    return response.status(200).json({ book });
+    return response.status(200).json(book);
   } catch (error) {
     console.log(error.message);
     response.status(500).send({ message: error.message });
@@ -56,7 +56,7 @@ router.get("/:id", async (request, response) => {
 });
 
 //To Update the neccessary stuff
-router.put("/:id", async (request, response) => {
+router.put('/:id', async (request, response) => {
   try {
     if (
       !request.body.title ||
@@ -82,7 +82,7 @@ router.put("/:id", async (request, response) => {
 });
 
 //to delete the require stuff
-router.delete("/:id", async (request, response) => {
+router.delete('/:id', async (request, response) => {
   try {
     const { id } = request.params;
     const book = await Book.findByIdAndDelete(id);
